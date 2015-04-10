@@ -99,34 +99,32 @@ nav li::after {
     right: 20px;
 }
 
-#locomotive-nose {
-    float: left;
-    position: relative;
-    top: 17px;
+.locomotive-nose {
+    position: absolute;
+    bottom: -1px;
+    left: -19px;
     width: 0;
     height: 0;
     border-bottom: 18px solid @darkestBlue;
     border-left: 18px solid transparent;
 }
 
-#locomotive-nose::after {
+.locomotive-chimney {
     position: absolute;
-    bottom: 17px;
-    left: 90px;
-    content: "";
-    width: 42px;
-    height: 30px;
+    bottom: 100%;
     background-color: @darkestBlue;
-}
-
-#locomotive-chimney {
-    float: left;
-    position: relative;
-    bottom: 28px;
-    left: 5px;
-    width: 18px;
-    height: 18px;
-    background-color: @darkestBlue;
+    
+    &.chimney-small {
+        left: 21px;
+        width: 18px;
+        height: 18px;
+    }
+    
+    &.chimney-big {
+        right: -1px;
+        width: 42px;
+        height: 30px;
+    }
 }
 
 .joiner::after {
