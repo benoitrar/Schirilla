@@ -1,0 +1,208 @@
+/* 
+    FONT-FAMILIES:
+    --------------------------------------
+    font-family: 'Montserrat', sans-serif;
+    font-family: 'Coming Soon', cursive;
+    font-family: 'Dancing Script', cursive;
+
+    COLOURS:
+    --------------------------------------
+    #B1DDF1 - light blue
+    #9F87AF - blueish purple
+    #88527F - purple
+*/
+
+@basePx: 1.25px;
+@baseFontPx: 16px;
+@h1FontPx: 24x;
+
+@lightBlue: #000; /*#B1DDF1;*/
+@blueishPurple: #000; /*#9F87AF;*/
+@purple: #000; /*#88527F;*/
+
+@darkestBlue: #06547E;
+@darkBlue: #35A0D8;
+@lightBlue: #76B6D8;
+
+body {
+    background-color: #FFF;
+    font-family: Arial, 'Helvetica Neue', Helvetica, sans-serif;
+    color: #000;
+    margin: 20px;
+}
+
+header {
+    height: 120px;
+    h1 {
+        line-height: 120px;
+        vertical-align: middle;
+        font-size: 32px;
+    }
+}
+
+.logo-wrapper {
+    margin-bottom: 20px;
+}
+
+h1::after, main::before {
+    content: "";
+    display: block;
+    clear: both;
+}
+
+#logo {
+    display: block;
+    float: left;
+    background-image: url(../img/logo_small.jpg);
+    background-repeat: no-repeat;
+    background-size: 294px 120px;
+    width: 294px;
+    height: 120px;
+    margin-right: 20px;
+}
+
+nav::after {
+    content: "";
+    display: block;
+    clear: both;
+    margin-bottom: 20px;
+}
+
+nav li {
+    font-size: 13px;
+    list-style-type: none;    
+    border: 1px solid @darkestBlue;
+    padding: 10px;
+    float: left;
+    width: 110px;
+    height: 13px;
+    text-align: center;
+    position: relative;
+    background-color: @lightBlue;
+    color: @darkestBlue;
+}
+
+nav li::before, nav li::after {
+    position: absolute;
+    top: 100%;
+    border: 10px solid @darkestBlue;
+    border-radius: 50%;
+    content: "";
+    font-size: 0;
+}
+
+nav li::before {
+    left: 20px;
+}
+
+nav li::after {
+    right: 20px;
+}
+
+#locomotive-nose {
+    float: left;
+    position: relative;
+    top: 17px;
+    width: 0;
+    height: 0;
+    border-bottom: 18px solid @darkestBlue;
+    border-left: 18px solid transparent;
+}
+
+#locomotive-nose::after {
+    position: absolute;
+    bottom: 17px;
+    left: 90px;
+    content: "";
+    width: 42px;
+    height: 15px;
+    background-color: @darkestBlue;
+}
+
+#locomotive-chimney {
+    float: left;
+    position: relative;
+    bottom: 28px;
+    left: 5px;
+    width: 18px;
+    height: 18px;
+    background-color: @darkestBlue;
+    //border-bottom: 18px solid @darkestBlue;
+    //border-left: 18px solid transparent;
+}
+
+.joiner::after {
+    content: "-";
+    float: left;
+    font-size: 20px;
+    line-height: 32px;
+    vertical-align: bottom;
+}
+
+main {
+    /*background-image: url(../img/schirilla_throwing_water_up_in_the_air.jpg);*/
+}
+
+#designedBy {
+    position: absolute;
+    left: -9999px;
+}
+
+/*html {
+    font-size: @baseFontPx;
+}
+
+body {
+    background-color: @blueishPurple;
+    font-family: Arial, 'Helvetica Neue', Helvetica, sans-serif;
+    color: @lightBlue;
+    margin: 0;
+}
+
+header {
+    color: @purple;
+    text-align: center;
+    height: 200 * @basePx;
+    
+    background-image: url(../img/schirilla_throwing_water_up_in_the_air.jpg);
+    background-size: cover;
+    background-position: bottom;
+}
+
+h1 {
+    font-size: @h1FontPx;
+    font-weight: bold;
+    line-height: 100px;
+    background-image: url(../img/logo.jpg);
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+
+header h1 {
+    text-align: center;
+    position: absolute;
+    top: 10px;
+    left: 0;
+    right: 0;
+    color: @blueishPurple;
+}
+
+nav li {
+    display: inline;
+}
+
+nav li:after {
+    content: " |";
+}
+
+footer {
+    position: absolute;
+    bottom: 5 *@basePx;
+    left: 0;
+    right: 0;
+    //height: 20 * @basePx;
+}
+
+footer h6 {
+    text-align: center;
+}*/
