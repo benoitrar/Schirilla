@@ -24,6 +24,8 @@
 @darkBlue: #35A0D8;
 @lightBlue: #76B6D8;
 
+/*** GENERAL CSS ***/
+
 body {
     font-family: Arial, 'Helvetica Neue', Helvetica, sans-serif;
     color: #000;
@@ -36,19 +38,16 @@ body {
     margin-right: auto;
 }
 
-h1 {
-    line-height: 120px;
-    vertical-align: middle;
-    font-size: 32px;
-    white-space: nowrap;
-    display: inline-block;
+p {
+    text-align: justify;
+    text-indent: 30px;
 }
 
-main::before {
-    content: "";
-    display: block;
-    clear: both;
+li {
+    text-indent: 60px;
 }
+
+/*** HEADER ***/
 
 #logo {
     display: block;
@@ -61,11 +60,21 @@ main::before {
     margin-right: 20px;
 }
 
+h1 {
+    line-height: 120px;
+    vertical-align: middle;
+    font-size: 32px;
+    white-space: nowrap;
+    display: inline-block;
+}
+
+/** NAVIGATION **/
+
 #navigation-wrapper {
     float: left;
     width: 100%;
     ul {
-        float: left;
+        float: right;
         position: relative;
         right: 50%;
         li {
@@ -155,6 +164,8 @@ nav li::after {
     left: 50%;
 }
 
+/*** MAIN ***/
+
 main {
     line-height: 25px;
     position: relative;
@@ -166,28 +177,18 @@ main {
 #main-wrapper {
     opacity: 0.66;
     filter: alpha(opacity=66); /* For IE8 and earlier */
-    background-color: #ffffff;
+    background-color: #fff;
     padding: 20px;
 }
 
-p {
-    text-align: justify;
-    text-indent: 30px;
-}
-
-li {
-    text-indent: 60px;
-    list-style-type: none;
-}
-
-li:before {
-    content: "- ";
-}
+/*** FOOTER ***/
 
 #designedBy {
     position: absolute;
     left: -9999px;
 }
+
+/*** RESOLUTION-DEPENDENT ***/
 
 @media screen and (max-width: 800px) {
     h1 {
