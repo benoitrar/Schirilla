@@ -38,19 +38,21 @@ body {
 }
 
 header {
-    height: 120px;
+    /*min-height: 120px;*/
     h1 {
         line-height: 120px;
         vertical-align: middle;
         font-size: 32px;
+        white-space: nowrap;
+        display: inline-block;
     }
 }
 
 .logo-wrapper {
-    margin-bottom: 20px;
+    /*margin-bottom: 20px;*/
 }
 
-h1::after, main::before {
+main::before {
     content: "";
     display: block;
     clear: both;
@@ -80,7 +82,7 @@ h1::after, main::before {
             right: 50%;
         }
     }
-    margin-bottom: 30px;
+    margin: 30px 0;
     border-bottom: 15px solid black;
 }
 
@@ -88,7 +90,7 @@ nav::after {
     content: "";
     display: block;
     clear: both;
-    margin-bottom: 20px;
+    /*margin-bottom: 20px;*/
 }
 
 nav li {
@@ -167,8 +169,13 @@ main {
     /*background-repeat: no-repeat;*/
     line-height: 25px;
     /*color: #b638bf;*/
-    margin-top: 100px;
-    padding: 0 10px 20px;
+    /*margin-top: 100px;*/
+}
+
+#main-wrapper {
+    background-image: url("file:///D:/prj/Schirilla/img/schirilla_throwing_water_up_in_the_air.jpg");
+    background-repeat: no-repeat;
+    padding: 20px;
 }
 
 p {
