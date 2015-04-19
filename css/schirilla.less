@@ -37,15 +37,12 @@ body {
     margin-right: auto;
 }
 
-header {
-    /*min-height: 120px;*/
-    h1 {
-        line-height: 120px;
-        vertical-align: middle;
-        font-size: 32px;
-        white-space: nowrap;
-        display: inline-block;
-    }
+h1 {
+    line-height: 120px;
+    vertical-align: middle;
+    font-size: 32px;
+    white-space: nowrap;
+    display: inline-block;
 }
 
 .logo-wrapper {
@@ -207,4 +204,11 @@ li:before {
 #designedBy {
     position: absolute;
     left: -9999px;
+}
+
+@media screen and (max-width: 800px) {
+    h1 {
+        clear: left;
+        line-height: 50px;
+    }
 }
