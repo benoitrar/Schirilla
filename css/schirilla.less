@@ -40,11 +40,17 @@ body {
 
 p {
     text-align: justify;
-    text-indent: 30px;
+    /*text-indent: 30px;*/
 }
 
 li {
-    text-indent: 60px;
+    /*text-indent: 60px;*/
+    text-indent: 30px;
+}
+
+a {
+    color: @darkestBlue;
+    text-decoration: none;
 }
 
 /*** HEADER ***/
@@ -124,6 +130,10 @@ nav li::before {
 
 nav li::after {
     right: 20px;
+}
+
+nav a li:hover {
+    text-decoration: underline;
 }
 
 .locomotive-nose {
