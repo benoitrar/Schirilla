@@ -102,5 +102,39 @@
             <h6 id="designedBy">Designed by Benedek Kiss</h6>
         </footer>
     </div>
+    <script>
+        var activeArticle = document.getElementById("adventure-tour");
+        activeArticle.classList.add("active");
+        
+        var linkToActiveArticle;
+        Array.prototype.forEach.call(document.getElementsByTagName("nav")[0].getElementsByTagName("a"), function(linkToArticle) {
+            if(linkToArticle.getAttribute("href").localeCompare("#adventure-tour") == 0) {
+                linkToActiveArticle = linkToArticle;
+            }
+        });
+        linkToActiveArticle.classList.add("selected");
+        
+        var setActive = function(linkToArticle, article) {
+            if(article !== activeArticle) {
+                activeArticle.classList.remove("active");
+                activeArticle = article;
+                activeArticle.classList.add("active");
+                
+                linkToActiveArticle.classList.remove("selected");
+                linkToActiveArticle = linkToArticle;
+                linkToActiveArticle.classList.add("selected");
+            }
+        };
+        
+        Array.prototype.forEach.call(document.getElementsByTagName("nav")[0].getElementsByTagName("a"), function(linkToArticle) {
+            var ref = linkToArticle.href;
+            var articleID = ref.substring(ref.lastIndexOf('#')+1);
+            var article = document.getElementById(articleID);
+            linkToArticle.onclick = function(event) {
+                event.preventDefault();
+                setActive(linkToArticle, article);
+            };
+        });
+    </script>
     </body>
 </html>
