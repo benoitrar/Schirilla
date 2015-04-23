@@ -103,12 +103,14 @@
         </footer>
     </div>
     <script>
-        var activeArticle = document.getElementById("adventure-tour");
+        var currentLocation = window.location.hash;
+        var activeArticleID = ((currentLocation.length > 0) ? currentLocation.substring(1) : "adventure-tour");
+        var activeArticle = document.getElementById(activeArticleID);
         activeArticle.classList.add("active");
         
         var linkToActiveArticle;
         Array.prototype.forEach.call(document.getElementsByTagName("nav")[0].getElementsByTagName("a"), function(linkToArticle) {
-            if(linkToArticle.getAttribute("href").localeCompare("#adventure-tour") == 0) {
+            if(linkToArticle.getAttribute("href").localeCompare("#" + activeArticleID) == 0) {
                 linkToActiveArticle = linkToArticle;
             }
         });
@@ -132,6 +134,7 @@
             var article = document.getElementById(articleID);
             linkToArticle.onclick = function(event) {
                 event.preventDefault();
+                window.location = ref;
                 setActive(linkToArticle, article);
             };
         });
