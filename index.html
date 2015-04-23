@@ -20,9 +20,9 @@
 
         <!-- OWN CSS files -->
         <link rel="stylesheet" href="css/reset.css">
-        <!--<link rel="stylesheet" href="css/schirilla.css">-->
-        <link rel="stylesheet/less" type="text/css" href="css/schirilla.less" />
-        <script src="js/less.min.js" type="text/javascript"></script>
+        <link rel="stylesheet" href="css/schirilla.css">
+        <!--<link rel="stylesheet/less" type="text/css" href="css/schirilla.less" />
+        <script src="js/less.min.js" type="text/javascript"></script>-->
     </head>
     <body>
     <div class="wrapper">
@@ -77,7 +77,7 @@
               <p>A hátizsákban legyen kulacs, elemlámpa, hálózsák, váltó fehérnemű, és alapvető tisztálkodási szerek.</p>
               <p>A sikeres teljesítők elismerő oklevelet és ajándékot kapnak.</p>
               <p>A kalandtúra időpontja: 2015. június 12. 13. 14. / Péntek, Szombat, Vasárnap /</p>
-              <p>Jelentkezés, bővebb információ Schirilla György kaland túra vezetőnél. Telefonszám: 06 30 216 1204. <a href="mailto:schirillaeletmod@gmail.com?Subject=Kalandtúra" target="_top">schirillaeletmod@gmail.com</a></p>
+              <p>Jelentkezés, bővebb információ Schirilla György kaland túra vezetőnél. Telefonszám: 06&nbsp;30&nbsp;216&nbsp;1204. <a href="mailto:schirillaeletmod@gmail.com?Subject=Kalandtúra" target="_top">schirillaeletmod@gmail.com</a></p>
               <!--<p>a</p><p>a</p><p>a</p><p>a</p><p>a</p><p>a</p><p>a</p><p>a</p><p>a</p><p>a</p><p>a</p><p>a</p><p>a</p><p>a</p><p>a</p><p>a</p><p>a</p><p>a</p><p>a</p><p>a</p><p>a</p><p>a</p><p>a</p><p>a</p><p>a</p><p>a</p><p>a</p><p>a</p><p>a</p>-->
             </article>
             <article id="swimming-in-the-winter">
@@ -138,6 +138,11 @@
                 setActive(linkToArticle, article);
             };
         });
+        less.pageLoadFinished.then(
+            function() {
+                console.log(document.getElementById('less:schirilla').innerHTML);
+            }
+        );
     </script>
     </body>
 </html>
